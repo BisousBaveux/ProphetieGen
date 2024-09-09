@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prophétie Aléatoire</title>
+    <!-- Lien vers la police de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Découvrez votre prophétie</h1> <!-- Titre qui changera après le chargement -->
+        <!-- Affiche le nombre de prophéties annoncées -->
+        <p id="compteur" class="blinking-text">Plus de 50 000 prophéties annoncées</p>
+
+        <!-- Formulaire pour entrer les informations -->
+        <form id="formulaire">
+            <label for="nom">prénom :</label>
+            <input type="text" id="nom" name="nom" required><br><br>
+
+            <label for="date">Date de naissance :</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="heure">Heure de naissance :</label>
+            <input type="time" id="heure" name="heure" required><br><br>
+
+            <label for="lieu">Lieu de naissance :</label>
+            <input type="text" id="lieu" name="lieu" required><br><br>
+
+            <button type="button" onclick="afficherBouton()">Soumettre</button>
+        </form>
+
+        <!-- Bouton pour afficher la prophétie, caché initialement -->
+        <div id="boutonProphetie" style="display: none;">
+            <button id="btn" onclick="afficherProphetie()">Interroger les Moires</button>
+        </div>
+
+        <!-- Loader de chargement caché initialement -->
+        <div id="chargement" style="display: none;">
+            <div class="spinner"></div>
+            <p class="typewriter">Les Moires lisent votre fil...</p>
+        </div>
+
+        <!-- Espace pour afficher la prophétie -->
+        <p id="prophetie"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
